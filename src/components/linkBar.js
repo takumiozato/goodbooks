@@ -5,39 +5,43 @@ import saleIcon from "../images/footer-sale.svg"
 import rankingIcon from "../images/footer-ranking.svg"
 import PropTypes from "prop-types"
 import React from "react"
-import "./linkBar.css"
+import styles from "./linkBar.module.css"
 
 const LinkBar = () => (
-  <div className="linkBar">
-    <ul className="linkBar-list">
-      <li className="linkBar-list-item linkBar-list-item-home">
-        <Link to="/" className="linkBar-list-link">
-          <img src={homeIcon} alt="ホーム" className="linkBar-image" />
+  <div className={styles.linkBar}>
+    <ul className={styles.linkBarList}>
+      <li className={styles.linkBarListItemHome}>
+        <Link to="/" className={styles.linkBarListLink}>
+          <img src={homeIcon} alt="ホーム" className={styles.linkBarImage} />
           ホーム
         </Link>
       </li>
-      <li className="linkBar-list-item linkBar-list-item-recommend">
-        <Link to="#" className="linkBar-list-link">
+      <li className={styles.linkBarListItemRecommend}>
+        <Link to="#" className={styles.linkBarListLink}>
           <img
             src={recommendIcon}
             alt="オススメ特集"
-            className="linkBar-image"
+            className={styles.linkBarImage}
           />
           オススメ特集
         </Link>
       </li>
-      <li className="linkBar-list-item linkBar-list-item-sale">
-        <Link to="#" className="linkBar-list-link">
-          <img src={saleIcon} alt="セール情報" className="linkBar-image" />
+      <li className={styles.linkBarListItemSale}>
+        <Link to="#" className={styles.linkBarListLink}>
+          <img
+            src={saleIcon}
+            alt="セール情報"
+            className={styles.linkBarImage}
+          />
           セール情報
         </Link>
       </li>
-      <li className="linkBar-list-item linkBar-list-item-ranking">
-        <Link to="#" className="linkBar-list-link">
+      <li className={styles.linkBarListItemRanking}>
+        <Link to="#" className={styles.linkBarListLink}>
           <img
             src={rankingIcon}
             alt="売れ筋ランキング"
-            className="linkBar-image"
+            className={styles.linkBarImage}
           />
           売れ筋ランキング
         </Link>

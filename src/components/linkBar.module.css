@@ -8,39 +8,42 @@
   width: 100%;
 }
 
-.linkBar-list {
+.linkBarList {
   display: flex;
   list-style: none;
 }
 
-.linkBar-list-link {
+.linkBarListLink {
   text-decoration: none;
   color: #fff;
   font-size: 10px;
 }
 
-.linkBar-list-item {
+.linkBarListItemHome {
+  width: 23%;
   text-align: center;
   line-height: 1;
 }
 
-.linkBar-list-item.linkBar-list-item-home {
-  width: 23%;
-}
-
-.linkBar-list-item.linkBar-list-item-recommend {
+.linkBarListItemRecommend {
   width: 24%;
+  text-align: center;
+  line-height: 1;
 }
 
-.linkBar-list-item.linkBar-list-item-sale {
+.linkBarListItemSale {
   width: 26%;
+  text-align: center;
+  line-height: 1;
 }
 
-.linkBar-list-item.linkBar-list-item-ranking {
+.linkBarListItemRanking {
   width: 27%;
+  text-align: center;
+  line-height: 1;
 }
 
-.linkBar-image {
+.linkBarImage {
   display: block;
   margin: 0 auto;
 }

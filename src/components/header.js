@@ -4,6 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header
+    className="linkBar-list"
     style={{
       backgroundColor: `#1A237E`,
       padding: "6px 12px 10px",
