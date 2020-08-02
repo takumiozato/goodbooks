@@ -1,0 +1,46 @@
+.linkBar {
+  background-color: #1a237e;
+  padding: 10px 0 14px;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.linkBar-list {
+  display: flex;
+  list-style: none;
+}
+
+.linkBar-list-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+}
+
+.linkBar-list-item {
+  text-align: center;
+  line-height: 1;
+}
+
+.linkBar-list-item.linkBar-list-item-home {
+  width: 23%;
+}
+
+.linkBar-list-item.linkBar-list-item-recommend {
+  width: 24%;
+}
+
+.linkBar-list-item.linkBar-list-item-sale {
+  width: 26%;
+}
+
+.linkBar-list-item.linkBar-list-item-ranking {
+  width: 27%;
+}
+
+.linkBar-image {
+  display: block;
+  margin: 0 auto;
+}
