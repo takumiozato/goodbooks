@@ -27,6 +27,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: "7e7be1cc-d3a6-4645-b601-810a839c155f",
+        serviceId: "goodbooks",
+        endpoint: "articles",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
