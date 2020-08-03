@@ -3,7 +3,6 @@ import homeIcon from "../images/footer-home.svg"
 import recommendIcon from "../images/footer-recommend.svg"
 import saleIcon from "../images/footer-sale.svg"
 import rankingIcon from "../images/footer-ranking.svg"
-import PropTypes from "prop-types"
 import React from "react"
 import styles from "./linkBar.module.css"
 

@@ -1,0 +1,32 @@
+.mainVisual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 15px;
+}
+
+.mainVisualTextWrapper {
+  width: 58%;
+}
+
+.mainVisualImageWrapper {
+  width: 40%;
+}
+
+.mainVisualTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.mainVisualSubTitle {
+  font-size: 14px;
+}
+
+.mainVisualLeadText {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mainVisualImage {
+  width: 100%;
+}
