@@ -19,7 +19,7 @@
 }
 
 .mainVisualSubTitle {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .mainVisualLeadText {
@@ -29,4 +29,33 @@
 
 .mainVisualImage {
   width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainVisual {
+    justify-content: center;
+    padding: 100px 15px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .mainVisualTextWrapper {
+    width: 40%;
+  }
+
+  .mainVisualImageWrapper {
+    width: 25%;
+  }
+
+  .mainVisualTitle {
+    font-size: 40px;
+  }
+
+  .mainVisualSubTitle {
+    font-size: 16px;
+  }
+
+  .mainVisualLeadText {
+    font-size: 20px;
+  }
 }
