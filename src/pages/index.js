@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => (
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>セール情報</h2>
       <div className={styles.articleWrapper}>
-        {data.recommend.edges.map(edge => (
+        {data.sale.edges.map(edge => (
           <article className={styles.article}>
             <img
               src={`${edge.node.image.url}?fit=clip&w=710`}
@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => (
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>売れ筋ランキング</h2>
       <div className={styles.articleWrapper}>
-        {data.recommend.edges.map(edge => (
+        {data.ranking.edges.map(edge => (
           <article className={styles.article}>
             <img
               src={`${edge.node.image.url}?fit=clip&w=710`}
@@ -96,7 +96,40 @@ export default IndexPage
 
 export const query = graphql`
   {
-    recommend: allMicrocmsArticles(sort: { fields: [createdAt], order: DESC }) {
+    recommend: allMicrocmsArticles(
+      sort: { fields: [createdAt], order: DESC }
+      filter: { category: { type: { eq: "recommend" } } }
+    ) {
+      edges {
+        node {
+          id
+          title
+          image {
+            url
+          }
+          createdAt(formatString: "YYYY年M月D日")
+        }
+      }
+    }
+    sale: allMicrocmsArticles(
+      sort: { fields: [createdAt], order: DESC }
+      filter: { category: { type: { eq: "sale" } } }
+    ) {
+      edges {
+        node {
+          id
+          title
+          image {
+            url
+          }
+          createdAt(formatString: "YYYY年M月D日")
+        }
+      }
+    }
+    ranking: allMicrocmsArticles(
+      sort: { fields: [createdAt], order: DESC }
+      filter: { category: { type: { eq: "ranking" } } }
+    ) {
       edges {
         node {
           id
