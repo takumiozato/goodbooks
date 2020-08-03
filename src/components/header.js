@@ -5,10 +5,12 @@ import styles from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
-    <Link to="/" className={styles.headerLink}>
-      <span className={styles.headerSubTitle}>ONLINE BOOK STORE</span>
-      <h1 className={styles.headerTitle}>{siteTitle}</h1>
-    </Link>
+    <div className={styles.headerInner}>
+      <Link to="/" className={styles.headerLink}>
+        <span className={styles.headerSubTitle}>ONLINE BOOK STORE</span>
+        <h1 className={styles.headerTitle}>{siteTitle}</h1>
+      </Link>
+    </div>
   </header>
 )
 

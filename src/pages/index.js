@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import mainVisual from "../images/main-visual.svg"
 import styles from "./index.module.css"
@@ -26,8 +25,23 @@ const IndexPage = ({ data }) => (
         />
       </div>
     </div>
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>オススメ特集</h2>
+      <div className={styles.articleWrapper}>
+        {data.recommend.edges.map(edge => (
+          <article className={styles.article}>
+            <img
+              src={`${edge.node.image.url}?fit=clip&w=710`}
+              alt={edge.node.title}
+              className={styles.articleImage}
+            />
+            <p className={styles.articleTitle}>{edge.node.title}</p>
+            <span className={styles.articleDate}>{edge.node.createdAt}</span>
+          </article>
+        ))}
+      </div>
+    </section>
     <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
@@ -35,11 +49,15 @@ export default IndexPage
 
 export const query = graphql`
   {
-    allMicrocmsArticles(sort: { fields: [createdAt], order: DESC }) {
+    recommend: allMicrocmsArticles(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id
           title
+          image {
+            url
+          }
+          createdAt(formatString: "YYYY年M月D日")
         }
       }
     }
