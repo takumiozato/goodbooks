@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `GoodBooks`,
@@ -30,7 +34,7 @@ module.exports = {
     {
       resolve: "gatsby-source-microcms",
       options: {
-        apiKey: "7e7be1cc-d3a6-4645-b601-810a839c155f",
+        apiKey: process.env.X_API_KEY,
         serviceId: "goodbooks",
         endpoint: "articles",
       },
