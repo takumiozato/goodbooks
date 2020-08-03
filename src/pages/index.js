@@ -40,6 +40,53 @@ const IndexPage = ({ data }) => (
           </article>
         ))}
       </div>
+      <div className={styles.sectionDetailLinkWrapper}>
+        <Link to="#" className={styles.sectionDetailLink}>
+          オススメ特集をもっと見る
+        </Link>
+      </div>
+    </section>
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>セール情報</h2>
+      <div className={styles.articleWrapper}>
+        {data.recommend.edges.map(edge => (
+          <article className={styles.article}>
+            <img
+              src={`${edge.node.image.url}?fit=clip&w=710`}
+              alt={edge.node.title}
+              className={styles.articleImage}
+            />
+            <p className={styles.articleTitle}>{edge.node.title}</p>
+            <span className={styles.articleDate}>{edge.node.createdAt}</span>
+          </article>
+        ))}
+      </div>
+      <div className={styles.sectionDetailLinkWrapper}>
+        <Link to="#" className={styles.sectionDetailLink}>
+          セール情報をもっと見る
+        </Link>
+      </div>
+    </section>
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>売れ筋ランキング</h2>
+      <div className={styles.articleWrapper}>
+        {data.recommend.edges.map(edge => (
+          <article className={styles.article}>
+            <img
+              src={`${edge.node.image.url}?fit=clip&w=710`}
+              alt={edge.node.title}
+              className={styles.articleImage}
+            />
+            <p className={styles.articleTitle}>{edge.node.title}</p>
+            <span className={styles.articleDate}>{edge.node.createdAt}</span>
+          </article>
+        ))}
+      </div>
+      <div className={styles.sectionDetailLinkWrapper}>
+        <Link to="#" className={styles.sectionDetailLink}>
+          売れ筋ランキングをもっと見る
+        </Link>
+      </div>
     </section>
     <Link to="/page-2/">Go to page 2</Link> <br />
   </Layout>
