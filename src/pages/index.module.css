@@ -58,7 +58,7 @@
 }
 
 .articleTitle {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #222;
 }
@@ -70,7 +70,7 @@
 
 .sectionDetailLink {
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-decoration: none;
   background-color: #1a237e;
@@ -80,8 +80,7 @@
 }
 
 .sectionDetailLinkWrapper {
-  margin: 0 auto;
-  max-width: 275px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -152,6 +151,10 @@
   }
 
   .articleDate {
+    font-size: 14px;
+  }
+
+  .sectionDetailLink {
     font-size: 14px;
   }
 }
