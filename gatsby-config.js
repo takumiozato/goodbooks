@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `GoodBooks`,
-        short_name: `starter`,
+        short_name: `GoodBooks`,
         start_url: `/`,
         background_color: `#1a237e`,
         theme_color: `#1a237e`,
