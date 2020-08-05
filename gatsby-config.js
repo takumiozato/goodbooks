@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `GoodBooks`,
     description: `働く大人のための読書案内`,
-    author: `@takumioozato`,
+    author: `@goodbooks`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,11 +22,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `GoodBooks`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1a237e`,
+        theme_color: `#1a237e`,
         display: `minimal-ui`,
         icon: `src/images/logo-icon.png`, // This path is relative to the root of the site.
       },

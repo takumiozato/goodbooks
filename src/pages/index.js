@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Post from "../components/post"
 import mainVisual from "../images/main-visual.svg"
 import styles from "./index.module.css"
 
@@ -29,15 +30,7 @@ const IndexPage = ({ data }) => (
       <h2 className={styles.sectionTitle}>オススメ特集</h2>
       <div className={styles.articleWrapper}>
         {data.recommend.edges.map(edge => (
-          <article className={styles.article}>
-            <img
-              src={`${edge.node.image.url}?fit=clip&w=710`}
-              alt={edge.node.title}
-              className={styles.articleImage}
-            />
-            <p className={styles.articleTitle}>{edge.node.title}</p>
-            <span className={styles.articleDate}>{edge.node.createdAt}</span>
-          </article>
+          <Post key={`recommed-${edge.node.id}`} props={edge} />
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
@@ -50,15 +43,7 @@ const IndexPage = ({ data }) => (
       <h2 className={styles.sectionTitle}>セール情報</h2>
       <div className={styles.articleWrapper}>
         {data.sale.edges.map(edge => (
-          <article className={styles.article}>
-            <img
-              src={`${edge.node.image.url}?fit=clip&w=710`}
-              alt={edge.node.title}
-              className={styles.articleImage}
-            />
-            <p className={styles.articleTitle}>{edge.node.title}</p>
-            <span className={styles.articleDate}>{edge.node.createdAt}</span>
-          </article>
+          <Post key={`sale-${edge.node.id}`} props={edge} />
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
@@ -71,15 +56,7 @@ const IndexPage = ({ data }) => (
       <h2 className={styles.sectionTitle}>売れ筋ランキング</h2>
       <div className={styles.articleWrapper}>
         {data.ranking.edges.map(edge => (
-          <article className={styles.article}>
-            <img
-              src={`${edge.node.image.url}?fit=clip&w=710`}
-              alt={edge.node.title}
-              className={styles.articleImage}
-            />
-            <p className={styles.articleTitle}>{edge.node.title}</p>
-            <span className={styles.articleDate}>{edge.node.createdAt}</span>
-          </article>
+          <Post key={`ranking-${edge.node.id}`} props={edge} />
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
@@ -99,6 +76,7 @@ export const query = graphql`
     recommend: allMicrocmsArticles(
       sort: { fields: [createdAt], order: DESC }
       filter: { category: { type: { eq: "recommend" } } }
+      limit: 3
     ) {
       edges {
         node {
@@ -114,6 +92,7 @@ export const query = graphql`
     sale: allMicrocmsArticles(
       sort: { fields: [createdAt], order: DESC }
       filter: { category: { type: { eq: "sale" } } }
+      limit: 3
     ) {
       edges {
         node {
@@ -129,6 +108,7 @@ export const query = graphql`
     ranking: allMicrocmsArticles(
       sort: { fields: [createdAt], order: DESC }
       filter: { category: { type: { eq: "ranking" } } }
+      limit: 3
     ) {
       edges {
         node {
