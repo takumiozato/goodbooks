@@ -20,13 +20,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main
-          style={{
-            paddingBottom: "80px",
-          }}
-        >
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
       <LinkBar />
     </>

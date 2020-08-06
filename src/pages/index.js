@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from "../components/post"
+import Footer from "../components/footer"
 import mainVisual from "../images/main-visual.svg"
 import styles from "./index.module.css"
 
@@ -65,7 +66,7 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
     </section>
-    <Link to="/page-2/">Go to page 2</Link> <br />
+    <Footer />
   </Layout>
 )
 
