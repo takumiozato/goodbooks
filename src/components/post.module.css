@@ -26,12 +26,12 @@
   .article {
     border-bottom: none;
     width: 48%;
+    margin-bottom: 50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .article {
-    margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
     width: 30%;
