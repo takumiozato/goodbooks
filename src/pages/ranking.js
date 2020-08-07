@@ -2,15 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import styles from "./ranking.module.css"
 
 const Ranking = ({ data }) => {
   return (
     <Layout>
-      <h1>売れ筋ランキング一覧</h1>
-      <div>
-        {data.ranking.edges.map(edge => (
-          <Post key={`ranking-${edge.node.id}`} props={edge} />
-        ))}
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>売れ筋ランキング一覧</h1>
+        <div className={styles.list}>
+          {data.ranking.edges.map(edge => (
+            <Post key={`ranking-${edge.node.id}`} props={edge} />
+          ))}
+        </div>
       </div>
     </Layout>
   )

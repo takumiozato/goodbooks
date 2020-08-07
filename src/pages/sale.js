@@ -2,15 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import styles from "./sale.module.css"
 
 const Sale = ({ data }) => {
   return (
     <Layout>
-      <h1>セール情報一覧</h1>
-      <div>
-        {data.sale.edges.map(edge => (
-          <Post key={`sale-${edge.node.id}`} props={edge} />
-        ))}
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>セール情報一覧</h1>
+        <div className={styles.list}>
+          {data.sale.edges.map(edge => (
+            <Post key={`sale-${edge.node.id}`} props={edge} />
+          ))}
+        </div>
       </div>
     </Layout>
   )

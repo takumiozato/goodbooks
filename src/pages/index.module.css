@@ -76,7 +76,6 @@
   .articleWrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -125,7 +124,6 @@
 
   .articleWrapper {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
   }
 

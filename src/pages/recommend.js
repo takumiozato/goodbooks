@@ -2,15 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import styles from "./recommend.module.css"
 
 const Recommend = ({ data }) => {
   return (
     <Layout>
-      <h1>オススメ特集一覧</h1>
-      <div>
-        {data.recommend.edges.map(edge => (
-          <Post key={`recommed-${edge.node.id}`} props={edge} />
-        ))}
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>オススメ特集一覧</h1>
+        <div className={styles.list}>
+          {data.recommend.edges.map(edge => (
+            <Post key={`recommed-${edge.node.id}`} props={edge} />
+          ))}
+        </div>
       </div>
     </Layout>
   )
