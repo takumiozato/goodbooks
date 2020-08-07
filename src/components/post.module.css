@@ -25,7 +25,7 @@
   .article {
     border-bottom: none;
     width: 45%;
-    margin-right: 15px;
+    margin-right: 25px;
     margin-bottom: 50px;
   }
 }
@@ -33,9 +33,7 @@
 @media screen and (min-width: 1024px) {
   .article {
     padding-bottom: 0;
-    border-bottom: none;
     width: 30%;
-    margin-right: 20px;
   }
 
   .articleImage {
