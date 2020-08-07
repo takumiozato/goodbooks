@@ -6,6 +6,7 @@ import Post from "../components/post"
 const Recommend = ({ data }) => {
   return (
     <Layout>
+      <h1>オススメ特集一覧</h1>
       <div>
         {data.recommend.edges.map(edge => (
           <Post key={`recommed-${edge.node.id}`} props={edge} />

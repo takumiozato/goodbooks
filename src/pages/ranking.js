@@ -6,6 +6,7 @@ import Post from "../components/post"
 const Ranking = ({ data }) => {
   return (
     <Layout>
+      <h1>売れ筋ランキング一覧</h1>
       <div>
         {data.ranking.edges.map(edge => (
           <Post key={`ranking-${edge.node.id}`} props={edge} />

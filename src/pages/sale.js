@@ -6,6 +6,7 @@ import Post from "../components/post"
 const Sale = ({ data }) => {
   return (
     <Layout>
+      <h1>セール情報一覧</h1>
       <div>
         {data.sale.edges.map(edge => (
           <Post key={`sale-${edge.node.id}`} props={edge} />

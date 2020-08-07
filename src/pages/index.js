@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from "../components/post"
-import Footer from "../components/footer"
 import mainVisual from "../images/main-visual.svg"
 import styles from "./index.module.css"
 
@@ -35,7 +34,7 @@ const IndexPage = ({ data }) => (
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
-        <Link to="#" className={styles.sectionDetailLink}>
+        <Link to="/recommend/" className={styles.sectionDetailLink}>
           オススメ特集をもっと見る
         </Link>
       </div>
@@ -48,7 +47,7 @@ const IndexPage = ({ data }) => (
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
-        <Link to="#" className={styles.sectionDetailLink}>
+        <Link to="/sale/" className={styles.sectionDetailLink}>
           セール情報をもっと見る
         </Link>
       </div>
@@ -61,12 +60,11 @@ const IndexPage = ({ data }) => (
         ))}
       </div>
       <div className={styles.sectionDetailLinkWrapper}>
-        <Link to="#" className={styles.sectionDetailLink}>
+        <Link to="/ranking/" className={styles.sectionDetailLink}>
           売れ筋ランキングをもっと見る
         </Link>
       </div>
     </section>
-    <Footer />
   </Layout>
 )
 

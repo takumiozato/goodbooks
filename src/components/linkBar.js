@@ -16,7 +16,7 @@ const LinkBar = () => (
         </Link>
       </li>
       <li className={styles.linkBarListItemRecommend}>
-        <Link to="#" className={styles.linkBarListLink}>
+        <Link to="/recommend/" className={styles.linkBarListLink}>
           <img
             src={recommendIcon}
             alt="オススメ特集"
@@ -26,7 +26,7 @@ const LinkBar = () => (
         </Link>
       </li>
       <li className={styles.linkBarListItemSale}>
-        <Link to="#" className={styles.linkBarListLink}>
+        <Link to="/sale/" className={styles.linkBarListLink}>
           <img
             src={saleIcon}
             alt="セール情報"
@@ -36,7 +36,7 @@ const LinkBar = () => (
         </Link>
       </li>
       <li className={styles.linkBarListItemRanking}>
-        <Link to="#" className={styles.linkBarListLink}>
+        <Link to="/ranking/" className={styles.linkBarListLink}>
           <img
             src={rankingIcon}
             alt="売れ筋ランキング"
