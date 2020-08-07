@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styles from "./footer.module.css"
 import twitterIcon from "../images/twitter.svg"
