@@ -16,3 +16,9 @@
     flex-wrap: wrap;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .title {
+    margin: 120px 0 30px;
+  }
+}
