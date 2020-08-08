@@ -54,7 +54,7 @@ const PostDetail = props => {
 export default PostDetail
 
 export const query = graphql`
-  query($id: String!) {
+  query($id: String) {
     microcmsArticles(id: { eq: $id }) {
       id
       createdAt(formatString: "YYYY年M月D日")
