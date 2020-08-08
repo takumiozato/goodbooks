@@ -17,7 +17,7 @@
 }
 
 .list {
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 
 .breadcrumb {
@@ -54,6 +54,7 @@
 @media screen and (min-width: 768px) {
   .list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -61,10 +62,14 @@
 @media screen and (min-width: 1024px) {
   .title {
     font-size: 24px;
-    margin: 50px 0 30px;
+    margin: 50px 0 10px;
   }
 
   .breadcrumb {
     padding-top: 100px;
+  }
+
+  .list {
+    padding: 50px 0 0;
   }
 }

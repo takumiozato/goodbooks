@@ -4,17 +4,22 @@ import styles from "./book.module.css"
 const Book = ({ props }) => (
   <article className={styles.book}>
     <img
-      src={`${props.image.url}?fit=clip&w=73`}
+      src={`${props.image.url}?fit=clip&w=146`}
       alt={props.title}
       className={styles.bookImage}
     />
     <div>
       <p className={styles.bookTitle}>{props.title}</p>
       <p className={styles.bookReview}>
-        <span>{props.review_point}</span>
-        <span>{`${props.review_count}個の評価`}</span>
+        <span
+          className={styles.bookReviewPoint}
+          data-rate={props.review_point}
+        ></span>
+        <span
+          className={styles.bookReviewCount}
+        >{`${props.review_count}個の評価`}</span>
       </p>
-      <p className={styles.bookPrice}>{`¥${props.price}`}</p>
+      <p className={styles.bookPrice}>{`¥${props.price.toLocaleString()}`}</p>
       <div className={styles.bookLinkWrapper}>
         <a
           href={props.amazon_url}
