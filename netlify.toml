@@ -1,0 +1,5 @@
+[[redirects]]
+from = "https://good-books.netlify.app/*"
+to = "https://goodbooks.app/:splat"
+status = 301
+force = true
