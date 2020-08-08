@@ -4,7 +4,7 @@ import styles from "./post.module.css"
 
 const Post = ({ props }) => (
   <article className={styles.article}>
-    <Link to={`/post/${props.node.id}`}>
+    <Link to={`/post/${props.node.id}`} className={styles.articleLink}>
       <img
         src={`${props.node.image.url}?fit=clip&w=710`}
         alt={props.node.title}

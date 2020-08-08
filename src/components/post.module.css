@@ -4,6 +4,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+.articleLink {
+  text-decoration: none;
+}
+
 .articleImage {
   width: 100%;
   margin-bottom: 5px;
@@ -39,13 +43,23 @@
 
   .articleImage {
     margin-bottom: 10px;
+    transition: 0.3s ease filter;
   }
 
   .articleTitle {
     font-size: 16px;
+    transition: 0.3s ease color;
   }
 
   .articleDate {
     font-size: 14px;
+  }
+
+  .articleLink:hover > .articleImage {
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.55));
+  }
+
+  .articleLink:hover > .articleTitle {
+    color: #ffb547;
   }
 }

@@ -130,4 +130,8 @@
   .sectionDetailLink {
     font-size: 14px;
   }
+
+  .sectionDetailLink:hover {
+    background-color: #0d1245;
+  }
 }

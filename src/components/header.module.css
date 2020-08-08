@@ -63,4 +63,8 @@
     color: #fff;
     text-decoration: none;
   }
+
+  .headerNavLink:hover {
+    text-decoration: underline;
+  }
 }
