@@ -1,0 +1,48 @@
+.book {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #969696;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.bookImage {
+  width: 73px;
+  height: 107px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-right: 15px;
+}
+
+.bookTitle {
+  font-size: 12px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.bookReview {
+  margin-bottom: 5px;
+}
+
+.bookPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.bookLinkWrapper {
+  max-width: 130px;
+}
+
+.bookLink {
+  background: #ffb547;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+}
