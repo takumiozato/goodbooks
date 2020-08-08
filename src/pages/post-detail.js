@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Book from "../components/book"
 import styles from "./post-detail.module.css"
 
@@ -23,6 +24,7 @@ const PostDetail = props => {
   }
   return (
     <Layout>
+      <SEO title={post.title} />
       <div className={styles.wrapper}>
         <ul className={styles.breadcrumb}>
           <li className={styles.breadcrumbItem}>

@@ -4,7 +4,7 @@ import styles from "./book.module.css"
 const Book = ({ props }) => (
   <article className={styles.book}>
     <img
-      src={`${props.image.url}?fit=clip&w=146`}
+      src={`${props.image.url}?fit=clip&w=186`}
       alt={props.title}
       className={styles.bookImage}
     />
@@ -24,7 +24,7 @@ const Book = ({ props }) => (
         <a
           href={props.amazon_url}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className={styles.bookLink}
         >
           Amazonでチェックする

@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Post from "../components/post"
 import styles from "./recommend.module.css"
 
 const Recommend = ({ data }) => {
   return (
     <Layout>
+      <SEO title="オススメ特集一覧" />
       <div className={styles.wrapper}>
         <h1 className={styles.title}>オススメ特集一覧</h1>
         <div className={styles.list}>
