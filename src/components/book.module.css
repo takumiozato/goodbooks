@@ -7,13 +7,13 @@
 }
 
 .bookImage {
-  width: 73px;
+  width: 93px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-right: 15px;
 }
 
 .bookTitle {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: #222;
   margin-bottom: 5px;
@@ -83,26 +83,26 @@
 }
 
 .bookReviewCount {
-  font-size: 10px;
+  font-size: 12px;
   color: #4a4a4a;
 }
 
 .bookPrice {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #222;
   margin-bottom: 10px;
 }
 
 .bookLinkWrapper {
-  max-width: 130px;
+  max-width: 160px;
 }
 
 .bookLink {
   background: #ffb547;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   color: #222;
   text-decoration: none;
@@ -118,7 +118,7 @@
   .book {
     border-bottom: none;
     padding-bottom: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     width: 45%;
   }
 }
