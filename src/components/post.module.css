@@ -8,6 +8,7 @@
   width: 100%;
   margin-bottom: 5px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
 }
 
 .articleTitle {
@@ -41,7 +42,7 @@
   }
 
   .articleTitle {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .articleDate {
