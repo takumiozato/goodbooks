@@ -12,8 +12,18 @@
 
 .date {
   font-size: 13px;
-  font-weight: bold;
-  color: #fd9800;
+  color: #222;
+}
+
+.description {
+  color: #222;
+  line-height: 1.7;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-top: 15px;
+  padding: 15px;
+  white-space: pre-wrap;
 }
 
 .list {
@@ -48,7 +58,7 @@
 }
 
 .breadcrumbLink {
-  color: #2682d7;
+  color: #176dbc;
 }
 
 @media screen and (min-width: 768px) {
@@ -56,6 +66,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .description {
+    font-size: 14px;
   }
 }
 

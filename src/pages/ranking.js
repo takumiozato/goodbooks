@@ -32,6 +32,7 @@ export const query = graphql`
       edges {
         node {
           id
+          articlesId
           title
           image {
             url

@@ -80,6 +80,7 @@ export const query = graphql`
       edges {
         node {
           id
+          articlesId
           title
           image {
             url
@@ -96,6 +97,7 @@ export const query = graphql`
       edges {
         node {
           id
+          articlesId
           title
           image {
             url
@@ -112,6 +114,7 @@ export const query = graphql`
       edges {
         node {
           id
+          articlesId
           title
           image {
             url

@@ -24,8 +24,8 @@ const PostDetail = props => {
   }
   return (
     <Layout>
-      <SEO title={post.title} />
-      <div className={styles.wrapper}>
+      <SEO title={post.title} description={post.description} />
+      <section className={styles.wrapper}>
         <ul className={styles.breadcrumb}>
           <li className={styles.breadcrumbItem}>
             <Link to="/" className={styles.breadcrumbLink}>
@@ -43,12 +43,15 @@ const PostDetail = props => {
         </ul>
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.date}>{`${post.createdAt} 更新`}</p>
+        {post.description_textarea && (
+          <p className={styles.description}>{post.description_textarea}</p>
+        )}
         <div className={styles.list}>
           {post.posts.map(post => (
             <Book props={post} />
           ))}
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }
@@ -57,8 +60,10 @@ export default PostDetail
 
 export const query = graphql`
   query($id: String) {
-    microcmsArticles(id: { eq: $id }) {
+    microcmsArticles(articlesId: { eq: $id }) {
       id
+      description
+      description_textarea
       createdAt(formatString: "YYYY年M月D日")
       image {
         url

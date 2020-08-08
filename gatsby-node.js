@@ -10,6 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
           edges {
             node {
               id
+              articlesId
             }
           }
         }
@@ -23,10 +24,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMicrocmsArticles.edges.forEach(edge => {
     createPage({
-      path: `/post/${edge.node.id}`,
+      path: `/post/${edge.node.articlesId}`,
       component: path.resolve("./src/pages/post-detail.js"),
       context: {
-        id: edge.node.id,
+        id: edge.node.articlesId,
       },
     })
   })
