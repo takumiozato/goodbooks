@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `GoodBooks`,
-    description: `働く大人のための読書案内`,
+    description: `オススメのビジネス書を様々なカテゴリーごとにまとめて紹介するサイト「GoodBooks」です！定番のビジネス書、必読のビジネス書から、新刊のビジネス書まで厳選してまとめています。`,
     author: `@goodbooks`,
   },
   plugins: [
