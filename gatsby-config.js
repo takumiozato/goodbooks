@@ -7,6 +7,7 @@ module.exports = {
     title: `GoodBooks`,
     description: `オススメのビジネス書を様々なカテゴリーごとにまとめて紹介するサイト「GoodBooks」です！定番のビジネス書、必読のビジネス書から、新刊のビジネス書まで厳選してまとめています。`,
     author: `@goodbooks`,
+    siteUrl: `https://goodbooks.app`,
   },
   plugins: [
     {
@@ -14,6 +15,12 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
       },
     },
     `gatsby-plugin-react-helmet`,
