@@ -41,6 +41,11 @@ const PostDetail = props => {
             <p>{post.title}</p>
           </li>
         </ul>
+        <img
+          src={`${post.image.url}?fit=clip&w=710`}
+          alt={post.title}
+          className={styles.coverImage}
+        />
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.date}>{`${post.createdAt} 更新`}</p>
         {post.description_textarea && (

@@ -14,12 +14,21 @@ const Footer = () => (
           Amazon.co.jpアソシエイト
         </span>
       </div>
-      <div className={styles.footerLinkWrapper}>
+      <div
+        style={{
+          display: "none",
+        }}
+        className={styles.footerLinkWrapper}
+      >
         <Link to="#" className={styles.footerLink}>
           このサイトについて
         </Link>
       </div>
-      <div>
+      <div
+        style={{
+          display: "none",
+        }}
+      >
         <Link to="#" className={styles.footerImageLink}>
           <img src={twitterIcon} alt="twitter" className={styles.footerImage} />
         </Link>
