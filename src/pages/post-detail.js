@@ -24,7 +24,16 @@ const PostDetail = props => {
   }
   return (
     <Layout>
-      <SEO title={post.title} description={post.description} />
+      <SEO
+        title={post.title}
+        description={post.description}
+        meta={[
+          {
+            property: `og:image`,
+            content: post.image.url,
+          },
+        ]}
+      />
       <section className={styles.wrapper}>
         <ul className={styles.breadcrumb}>
           <li className={styles.breadcrumbItem}>
